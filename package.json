@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/webpack -d",
-    "build-dev": "./node_modules/.bin/webpack -d --watch"
+    "build-dev": "./node_modules/.bin/webpack -d --watch",
+    "start": "node src/server/app.js",
+    "start-dev": "DEV=1 node src/server/app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,9 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "webpack-dev-middleware": "^1.6.1"
   }
 }
