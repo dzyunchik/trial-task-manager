@@ -3,6 +3,9 @@ import fetch from 'isomorphic-fetch';
 //var ajax = require('es-ajax');
 var AjaxPromise = require('ajax-promise');
 
+//
+// Auth
+//
 export const login = (name, password) => {
     return dispatch => {
         return AjaxPromise
@@ -77,6 +80,9 @@ export const logoutError = (error) => {
     }
 };
 
+//
+// UI
+//
 export const startLoading = () => {
     return {
         type: ActionTypes.LOADING_START
@@ -85,5 +91,33 @@ export const startLoading = () => {
 export const stopLoading = () => {
     return {
         type: ActionTypes.LOADING_FINISHED
+    }
+};
+
+//
+// Tasks
+//
+export const getTasks = (filter) => {
+    return dispatch => {
+        dispatch(startLoading());
+
+        return AjaxPromise
+            .get('/api/tasks', {
+                filter: filter
+            })
+            .then(function (response) {
+                dispatch(stopLoading());
+                dispatch(updateTasks(response.data));
+            })
+            .catch(function (err) {
+                dispatch(stopLoading());
+                updateError(err);
+            });
+    }
+};
+export const updateTasks = (tasks) => {
+    return {
+        type: ActionTypes.UPDATE_TASKS,
+        tasks
     }
 };

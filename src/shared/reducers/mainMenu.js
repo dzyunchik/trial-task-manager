@@ -16,20 +16,14 @@ const mainMenu = (state = {}, action) => {
 
             {
                 id: 2,
-                title: 'Tasks on me',
-                link: '/onme'
+                title: 'My tasks',
+                link: '/my'
             },
 
             {
                 id: 3,
-                title: 'My tasks',
-                link: '/byme'
-            },
-
-            {
-                id: 4,
-                title: 'Logout',
-                link: '/logout'
+                title: 'My work',
+                link: '/me'
             }
         ]
     }

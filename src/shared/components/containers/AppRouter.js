@@ -6,6 +6,7 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 import * as actionCreators from '../../actions/index';
 import App from './App';
 import Test from './Test';
+import Tasks from './Tasks';
 
 class AppRouter extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class AppRouter extends React.Component {
             <Router history={browserHistory}>
                 <Route path="/" component={App}/>
                 <Route path="/test" component={Test}/>
+                <Route path="/my" component={Tasks}/>
             </Router>
         );
     }

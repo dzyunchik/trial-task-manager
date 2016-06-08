@@ -10,3 +10,6 @@ export const LOADING_FINISHED = 'LOADING_FINISHED';
 
 export const GET_USER_INFO = 'GET_USER_INFO';
 export const USER_INFO_UPDATE = 'USER_INFO_UPDATE';
+
+export const GET_TASKS = 'GET_TASKS';
+export const UPDATE_TASKS = 'UPDATE_TASKS';
