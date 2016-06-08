@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "ajax-promise": "^0.8.1",
-    "bcrypt": "^0.8.6",
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.3",
     "es-ajax": "^1.1.5",
