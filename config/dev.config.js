@@ -7,6 +7,7 @@ module.exports = {
             publicPath: '/js'
         },
         staticDir: 'public',
-        port: 8201
+        port: 8201,
+        mongodb: 'mongodb://localhost/test'
     }
 };

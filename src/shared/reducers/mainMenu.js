@@ -16,8 +16,20 @@ const mainMenu = (state = {}, action) => {
 
             {
                 id: 2,
-                title: 'Test',
-                link: '/test'
+                title: 'Tasks on me',
+                link: '/onme'
+            },
+
+            {
+                id: 3,
+                title: 'My tasks',
+                link: '/byme'
+            },
+
+            {
+                id: 4,
+                title: 'Logout',
+                link: '/logout'
             }
         ]
     }
