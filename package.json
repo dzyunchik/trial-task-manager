@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/webpack -d",
-    "build-dev": "./node_modules/.bin/webpack -d --watch"
+    "build-dev": "./node_modules/.bin/webpack -d --watch",
+    "start": "node src/server/app.js",
+    "start-dev": "DEV=1 node src/server/app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,24 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
+    "ajax-promise": "^0.8.1",
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.3",
+    "es-ajax": "^1.1.5",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mongoose": "^4.4.20",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-bootstrap": "^0.29.4",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "webpack-dev-middleware": "^1.6.1"
   }
 }
