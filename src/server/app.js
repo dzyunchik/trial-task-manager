@@ -1,6 +1,7 @@
 var express = require('express');
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
+var path = require('path');
 
 var isInDevMode = !!process.env.DEV;
 var config = require('../../config/' + (isInDevMode ? 'dev.' : '') + 'config');
@@ -22,6 +23,10 @@ if (process.env.DEV) {
 }
 
 app.use(express.static(systemConfig.staticDir));
+
+app.use(function(req, res) {
+   res.sendFile(path.resolve(__dirname + '/../../public/test.html'));
+});
 
 app.listen(systemConfig.port);
 console.log('Server is listening to :' + systemConfig.port + ' port');

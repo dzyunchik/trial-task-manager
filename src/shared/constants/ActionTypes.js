@@ -1,0 +1,9 @@
+export const AUTH_LOGIN = 'AUTH_LOGIN';
+export const AUTH_LOGOUT = 'AUTH_LOGIN';
+
+export const AUTH_LOGIN_FINISH = 'AUTH_LOGIN_FINISH';
+export const AUTH_LOGOUT_FINISH = 'AUTH_LOGOUT_FINISH';
+
+
+export const LOADING_START = 'LOADING_START';
+export const LOADING_FINISHED = 'LOADING_FINISHED';
